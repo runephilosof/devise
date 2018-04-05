@@ -8,7 +8,7 @@ module Devise
     module Rememberable
       # Return default cookie values retrieved from session options.
       def self.cookie_values
-        Rails.configuration.session_options.slice(:path, :domain, :secure)
+        Rails.configuration.session_options.slice(:path, :domain, :tld_length, :secure)
       end
 
       def remember_me_is_active?(resource)
